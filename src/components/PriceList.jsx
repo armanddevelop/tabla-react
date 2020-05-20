@@ -18,22 +18,13 @@ const PriceList = () => {
   });
 
   let [dataTable, setDataTable] = useState({});
-
   useEffect(() => {
-    const test = Api.productsResponse();
-    setDataTable(test);
+    Api.productsResponse().then((resp) => {
+      console.log("Esto esta dentro del useEffect ", resp);
+      setDataTable(resp);
+    });
   }, []);
-  console.log(dataTable);
-  // async function productsResponse() {
-  //   try {
-  //     const getProductos = await clientAxios.get("products");
-  //     console.log(getProductos.data);
-  //     setDataTable(getProductos.data);
-  //   } catch (error) {
-  //     console.log("This is the Error ", error);
-  //   }
-  // }
-
+  console.log("Este es el valor de hook dataTable ", dataTable);
   const createData = (nameProduct, wholeSalePrice, retailPrice, id) => {
     return { nameProduct, wholeSalePrice, retailPrice, id };
   };
