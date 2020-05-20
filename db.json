@@ -1,0 +1,40 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "lentejas",
+      "wholesalePrice": 8,
+      "retailPrice": 10
+    },
+    {
+      "id": 2,
+      "name": "Ajo japones",
+      "wholesalePrice": 55,
+      "retailPrice": 65
+    },
+    {
+      "id": 3,
+      "name": "Tamarindo",
+      "wholesalePrice": 12,
+      "retailPrice": 15
+    },
+    {
+      "id": 4,
+      "name": "Fijol texano",
+      "wholesalePrice": 12,
+      "retailPrice": 15
+    },
+    {
+      "id": 5,
+      "name": "Fijol peruano",
+      "wholesalePrice": 15,
+      "retailPrice": 18
+    },
+    {
+      "id": 6,
+      "name": "Fijol peruano bola",
+      "wholesalePrice": 18,
+      "retailPrice": 22
+    }
+  ]
+}
