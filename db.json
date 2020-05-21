@@ -35,6 +35,12 @@
       "name": "Fijol peruano bola",
       "wholesalePrice": 18,
       "retailPrice": 22
+    },
+    {
+      "id": 7,
+      "name": "tamariando",
+      "wholesalePrice": 18,
+      "retailPrice": 22
     }
   ]
 }

@@ -2,13 +2,12 @@ import clientAxios from "../config/axios";
 
 export async function productsResponse() {
   try {
-    return await clientAxios.get("products").then((resp) => {
-      console.log(resp.data);
-      return resp.data;
+    let priceList = await clientAxios.get("products").then((res) => {
+      return res.data;
     });
+    return priceList;
   } catch (error) {
-    console.log("This is the Api error ", error);
-    return error;
+    console.log("Este es el Error de la API ", error);
   }
 }
 export async function productsResponse2(success, error) {

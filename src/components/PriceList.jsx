@@ -17,27 +17,15 @@ const PriceList = () => {
     },
   });
 
-  let [dataTable, setDataTable] = useState({});
+  let [dataTable, setDataTable] = useState([]);
   useEffect(() => {
     Api.productsResponse().then((resp) => {
-      console.log("Esto esta dentro del useEffect ", resp);
       setDataTable(resp);
     });
   }, []);
-  console.log("Este es el valor de hook dataTable ", dataTable);
-  const createData = (nameProduct, wholeSalePrice, retailPrice, id) => {
-    return { nameProduct, wholeSalePrice, retailPrice, id };
-  };
 
   const styleTable = useStyles();
-  const rows = [
-    createData("Lentejas", 8, 10, 1),
-    createData("Ajo Japones", 55, 65, 2),
-    createData("Tamarindo", 12, 15, 3),
-    createData("Fijol texano", 12, 15, 4),
-    createData("Fijol peruano", 15, 18, 5),
-    createData("Fijol peruano bola", 18, 22, 6),
-  ];
+
   return (
     <>
       <h2>Hola desde lista de precios</h2>
@@ -45,18 +33,18 @@ const PriceList = () => {
         <Table className={styleTable.table} aria-label="simple table">
           <TableHead>
             <TableRow>
-              <TableCell> Products</TableCell>
+              <TableCell> Productos</TableCell>
               <TableCell align="center">Precio Mayoreo</TableCell>
               <TableCell align="center">Precio Menudeo</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
-            {rows.map((row) => (
+            {dataTable.map((row) => (
               <TableRow key={row.id}>
                 <TableCell component="th" scope="row">
-                  {row.nameProduct}
+                  {row.name}
                 </TableCell>
-                <TableCell align="center">$ {row.wholeSalePrice}</TableCell>
+                <TableCell align="center">$ {row.wholesalePrice}</TableCell>
                 <TableCell align="center">$ {row.retailPrice}</TableCell>
               </TableRow>
             ))}
