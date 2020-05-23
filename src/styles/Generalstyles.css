@@ -1,3 +1,29 @@
-.container {
-  white-space: nowrap;
+/*Styles to the NavBar component*/
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+ul.nav-paginator {
+  margin-bottom: 0rem;
+}
+li {
+  float: left;
+  border-right: 1px solid #bbb;
+}
+
+a {
+  display: block;
+  padding: 8px;
+  background-color: #dddddd;
+}
+/* Change the link color on hover */
+li a:hover {
+  background-color: rgba(68, 67, 67, 0.726);
+  color: white;
+  text-decoration: none;
+}
+.active {
+  background-color: #4caf50;
+  color: white;
 }
