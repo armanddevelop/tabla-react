@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, useHistory } from "react-router-dom";
-import { Nav, Navbar } from "react-bootstrap";
+import { Navbar } from "react-bootstrap";
 
 import "../styles/Generalstyles.css";
 
@@ -11,7 +11,6 @@ const NavBar = () => {
   };
   return (
     <Navbar bg="ligth" expand="lg">
-      <Navbar.Brand>Cereales Honguilla</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <ul className="nav-paginator">
